@@ -44,40 +44,40 @@ import gtk		# The gtk code is adapted from Ben Duffield's Ardonis Wordpress. Tha
 ##### 
 
 def responseToDialog(entry, dialog, response):
-    dialog.response(response)
+	dialog.response(response)
 def getText(file):
-    #base this on a message dialog
-    dialog = gtk.MessageDialog(
-        None,
-        gtk.DIALOG_MODAL | gtk.DIALOG_DESTROY_WITH_PARENT,
-        gtk.MESSAGE_QUESTION,
-        gtk.BUTTONS_OK,None)
-    dialog.set_markup('Edit the photo now. Then enter new file name. Use the scanner-gun on the QR if possible. Leave the space blank to use old file name.')
-    checkBlurry = gtk.CheckButton() 	# Add checkmark box
-    entry = gtk.Entry()			# Add text-entry box				
-    entry.connect("activate", responseToDialog, dialog, gtk.RESPONSE_OK)
-    vbox = gtk.VBox(TRUE)						# Vertical box
-    hbox1 = gtk.HBox(TRUE)						# First horizontal box has text-entry
-    hbox1.pack_start(gtk.Label("New Filename:"), True, True, 0)
-    hbox1.pack_end(entry)
-    vbox.pack_start(hbox1) 						# Second horizontal box has checkbox
-    hbox2 = gtk.HBox(TRUE)
-    hbox2.pack_start(gtk.Label("Flag Bad Image:"), True, True, 0)
-    hbox2.pack_end(checkBlurry, True, True, 0)
-    vbox.pack_end(hbox2)
-    vbox.pack_end(gtk.Label(), True, True, 0)				
-    dialog.vbox.pack_end(vbox, True, True, 0)				# Done packing
-    dialog.show_all()
+	#base this on a message dialog
+	dialog = gtk.MessageDialog(
+		None,
+		gtk.DIALOG_MODAL | gtk.DIALOG_DESTROY_WITH_PARENT,
+		gtk.MESSAGE_QUESTION,
+		gtk.BUTTONS_OK,None)
+	dialog.set_markup('Edit the photo now. Then enter new file name. Use the scanner-gun on the QR if possible. Leave the space blank to use old file name.')
+	checkBlurry = gtk.CheckButton() 	# Add checkmark box
+	entry = gtk.Entry()			# Add text-entry box				
+	entry.connect("activate", responseToDialog, dialog, gtk.RESPONSE_OK)
+	vbox = gtk.VBox(TRUE)						# Vertical box
+	hbox1 = gtk.HBox(TRUE)						# First horizontal box has text-entry
+	hbox1.pack_start(gtk.Label("New Filename:"), True, True, 0)
+	hbox1.pack_end(entry)
+	vbox.pack_start(hbox1) 						# Second horizontal box has checkbox
+	hbox2 = gtk.HBox(TRUE)
+	hbox2.pack_start(gtk.Label("Flag Bad Image:"), True, True, 0)
+	hbox2.pack_end(checkBlurry, True, True, 0)
+	vbox.pack_end(hbox2)
+	vbox.pack_end(gtk.Label(), True, True, 0)				
+	dialog.vbox.pack_end(vbox, True, True, 0)				# Done packing
+	dialog.show_all()
 
-    dialog.run()
-    text = entry.get_text() + ".jpg"
+	dialog.run()
+	text = entry.get_text() + ".jpg"
     
-    if(text == ".jpg"):			# If the dialog is returned empty, use old file name
-	text = file
-    if(checkBlurry.get_active()):	# If flagged, start filename with "bad_pic_"
-	text = "bad_pic_" + text
-    dialog.destroy() 			# Destroy and return filename
-    return text
+	if(text == ".jpg"):			# If the dialog is returned empty, use old file name
+		text = file
+	if(checkBlurry.get_active()):	# If flagged, start filename with "bad_pic_"
+		text = "bad_pic_" + text
+	dialog.destroy() 			# Destroy and return filename
+	return text
 
 #####
 
@@ -112,24 +112,24 @@ def PrepareImage(file,OldDir,NewDir,renameMe,rotateMe,correctMe,imageQuality):		
 #####
 
 register(
-   	"Bug-Flipper",						# Name
-   	"Made by Ted Tinker for Cheadle Center's zoologists",	# Blurb
-   	"Made by Ted Tinker for Cheadle Center's zoologists for human-assisted-image-processing of standardized insect photos.",	# Help
+	"Bug-Flipper",						# Name
+	"Made by Ted Tinker for Cheadle Center's zoologists",	# Blurb
+	"Made by Ted Tinker for Cheadle Center's zoologists for human-assisted-image-processing of standardized insect photos.",	# Help
 	"Ted Tinker",						# Author
 	"Ted Tinker, freeware",					# Copywrite
-    	"2017",							# Date
-    	"Bug-Flipper",						# Display Name
-    	"",      						# No picture required
-    [
-	(PF_DIRNAME, "OldDir", "Folder with photos:","/Users/herbarium/Desktop/insect-images-for-processing"),	# Method Parameters
-	(PF_DIRNAME, "NewDir", "Folder to save photos:", "/Users/katjaseltmann/Public/insect-images-processing/flipped"),
-	(PF_BOOL, "renameMe", "Rename/Edit photos?", 1),
-	(PF_BOOL, "rotateMe", "Rotate photos 180 degrees?", 1),
-	(PF_BOOL, "correctMe", "Run white-balance/color-correction?", 1),
-	(PF_BOOL, "deleteOld", "Delete old photos after processing?", 1),
-	(PF_SLIDER, "imageQuality", "Saved Image Quality:", .3,(.01,1,.01))
-    ],
-    [],								# Method Return
-    BugFlipper, menu="<Toolbox>/Filters")
+	"2017",							# Date
+	"Bug-Flipper",						# Display Name
+	"",      						# No picture required
+	[
+		(PF_DIRNAME, "OldDir", "Folder with photos:","/Users/herbarium/Desktop/insect-images-for-processing"),	# Method Parameters
+		(PF_DIRNAME, "NewDir", "Folder to save photos:", "/Users/katjaseltmann/Public/insect-images-processing/flipped"),
+		(PF_BOOL, "renameMe", "Rename/Edit photos?", 1),
+		(PF_BOOL, "rotateMe", "Rotate photos 180 degrees?", 1),
+		(PF_BOOL, "correctMe", "Run white-balance/color-correction?", 1),
+		(PF_BOOL, "deleteOld", "Delete old photos after processing?", 1),
+		(PF_SLIDER, "imageQuality", "Saved Image Quality:", .3,(.01,1,.01))
+	],
+	[],								# Method Return
+	BugFlipper, menu="<Toolbox>/Filters")
 
 main()
