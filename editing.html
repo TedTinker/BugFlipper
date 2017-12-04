@@ -1,3 +1,15 @@
+<!DOCTYPE html>
+<html>
+<h1>BugFlipper</h1>
+<h2>A plug-in for human-assisted image-processing in the GIMP</h2>
+  <div class="topnav" id="myTopnav">
+  <a href="index.html">About and Downloads</a>
+  <a href="installation.html">Installation</a>
+  <a href="using.html">User Guide</a>
+  <a href="troubleshooting">Troubleshooting</a>
+  <a href="editing">Customizing GenericBugFlipper</a>
+</div>
+<body>
 <h1>Customizing GenericBugFlipper</h1>
 
 <p>GenericBugFlipper.py may be opened in most text editors including Notepad and TextWrangler. For changes to the code to take effect, the changes must be saved before the GIMP is opened. </p>
@@ -18,3 +30,5 @@
 <li><p>The final section is the registry, which provides the GIMP with basic features of the plug-in. First it specifies the name of the program, a description, a help-message, etcetera. The empty string “” in the eighth position signifies that no image need be displayed in the GIMP for the program to function; the plug-in will open images on its own. Then the registry enumerates the variables which the user should enter when the plug-in is initially clicked. For most variables the default setting is the last element of the associated list in parentheses; for variables like PF_RADIO and PF_SLIDER, the default is the second-to-last element of that list because an additional element is required. The following empty square brackets represent that the plug-in returns no value. Finally the plug-in is placed in the GIMP’s drop-down menu “menu=“<Toolbox>/Filters”)” and the main function is run. By changing the register function the plug-in may be moved in the GIMP’s menus and the default settings may be changed.</p></li>
 </ol>
 <p>Armed with this description of the plug-in’s functioning, it should be possible to modify features to expand the usage of the program.</p>
+</body>
+</html>
