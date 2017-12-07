@@ -30,13 +30,13 @@
 
 <li>If run using “yes,” each image will be processed and then displayed in the GIMP one at a time. The user may then edit the photo (for example, cropping it by hand). As the image is displayed a dialog box appears asking for a filename. When the user clicks the button labeled “Enter” in the dialog box, or types the enter key while typing in the filename entry-box, the display is removed and the image is saved with the filename given. Leave the entry-box empty to save using the old filename instead of a new one. Below the entry-box the user may mark a checkbox to flag the photograph as of poor quality; then the string “bad_pic_” will be appended to the filename returned. (In the case of Cheadle Hall entomology, each photograph contains a QR code. After cropping, the user may click in the filename-entry-box and scan the QR code to automatically save the photo with the proper name and move to the next image.)</li>
 
-  <li>If run using “no,” the images are processed but not displayed. No human input is needed.</li>
+ <li>If run using “no,” the images are processed but not displayed. No human input is needed.</li>
 
 <li>“Rotate Photos?”: Select whether each photo should be rotated 90 degrees, 180 degrees, 270 degrees, or not at all. The default is no rotation at all.</li>
 
 <li>“Run white-balance/color-correction?”: Select “yes” or “no.” The default is “yes.” The white-balance and color-correction plug-in was written by Diego Nassetti.</li>
 
-<li>“Delete old photos after processing?”: Select “yes” or “no.” The default is “no.” If the plug-in is run using “yes,” the old image is deleted when the processed image is saved. (Never use this if pulling photos from and saving to the same folder without renaming; each saved file will replace the original, and then it will be deleted.)</li>
+<li>“Delete old photos after processing?”: Select “yes” or “no.” The default is “no.” If the plug-in is run using “yes,” each old image is deleted when its processed image is saved. (Never use "yes" when pulling photos from and saving to the same folder without renaming; each saved file will replace the original, and then it will be deleted.)</li>
 
 <li>“Saved Image Quality”: Use the slider-bar to choose a number between .01 and 1. The default is .3. Using 1 saves the image without compressing it. Using .01 saves the image with maximum compression (most detail is lost, but large, high-contrast writing may be legible). Using .3 saves the image with some compression. </li>
 </ul>
