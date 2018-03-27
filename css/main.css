@@ -1,3 +1,9 @@
 header {
     text-align: center;
 }
+
+a {
+    border: 2px solid black;
+    border-radius: 2px;
+    padding: 2px 4px 8px 16px;
+}
