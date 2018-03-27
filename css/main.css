@@ -4,6 +4,6 @@ header {
 
 a.menu {
     border: 2px solid black;
-    border-radius: 5px;
-    padding: 4px 8px 4px 8px;
+    border-radius: 6px;
+    padding: 4px 12px 4px 12px;
 }
