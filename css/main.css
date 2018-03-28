@@ -18,5 +18,5 @@ img {
     animation-name: spinning;
     animation-duration: 5s;
     animation-iteration-count: infinite;
-    animation-timing-fuction: ease-in-out;
+    animation-timing-function: linear;
 }
