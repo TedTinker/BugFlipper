@@ -7,3 +7,16 @@ a.menu {
     border-radius: 6px;
     padding: 4px 12px 4px 12px;
 }
+
+@keyframes spinning {
+    0% {left:0;}
+    50% {left:100;}
+    100% {left:0}
+}
+
+img {
+    animation-name: spinning;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-fuction: ease-in-out;
+}
