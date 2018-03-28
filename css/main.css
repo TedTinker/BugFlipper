@@ -20,7 +20,7 @@ a.menu {
 
 img {
     animation-name: spinning;
-    animation-duration: 20s;
+    animation-duration: 60s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
     animation-delay: 1s;
