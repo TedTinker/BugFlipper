@@ -9,9 +9,9 @@ a.menu {
 }
 
 @keyframes spinning {
-    0% {left:0;}
-    50% {left:100;}
-    100% {left:0}
+    0% {left:0px;}
+    50% {left:100px;}
+    100% {left:0px}
 }
 
 img {
