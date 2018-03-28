@@ -24,4 +24,5 @@ img {
     animation-duration: 20s;
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
+    animation-delay: 5s;
 }
