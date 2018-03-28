@@ -10,11 +10,9 @@ a.menu {
 
 @keyframes spinning {
     0% {transform: scale(1,1);}
-    10% {transform: scale(1,1);}
-    30% {transform: scale(-1,1);}
-    50% {transform: scale(-1,-1);}
-    70% {transform: scale(1,-1);}
-    90% {transform: scale(1,1);}
+    20% {transform: scale(-1,1);}
+    40% {transform: scale(-1,-1);}
+    60% {transform: scale(1,1);}
     100% {transform: scale(1,1);}
 }
 
