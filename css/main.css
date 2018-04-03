@@ -18,7 +18,7 @@ a.menu {
     100% {transform: scale(1,1);}
 }
 
-img {
+img.top {
     animation-name: spinning;
     animation-duration: 60s;
     animation-iteration-count: infinite;
