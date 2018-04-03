@@ -24,3 +24,7 @@ img.top {
     animation-iteration-count: infinite;
     animation-timing-function: ease-in-out;
 }
+
+img {
+    text-align: center;
+}
