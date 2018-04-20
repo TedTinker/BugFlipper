@@ -108,13 +108,13 @@ def PrepareImage(file,OldDir,NewDir,renameMe,rotateMe,correctMe,imageQuality):		
 #####
 
 register(
-   	"Bug-Flipper",						# Name
+   	"BugFlipper",						# Name
    	"Check TedTinker.github.io for information, including instructions on changing default settings",	# Blurb
    	"Check TedTinker.github.io for information, including instructions on changing default settings",	# Help
 	"Ted Tinker",						# Author
 	"Ted Tinker, freeware",					# Copywrite
     	"2017",							# Date
-    	"Bug-Flipper",						# Display Name
+    	"BugFlipper",						# Display Name
     	"",      						# No picture required
 
     [		# Method Parameters. Change defaults here!
